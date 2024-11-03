@@ -53,7 +53,7 @@ Pivot Tables, Excel formula and SQL queries.
 =RANK.EQ(COUNTIF(D:D,D2), COUNTIF(D:D,D:D),0)
 ```
 ##### Pivot Tables
-
+https://github.com/MercyArik/Customer-Segmentation-for-a-Subscription-Service/blob/main/PIVOT1.png
 
 #### SQL Queries
 ```
