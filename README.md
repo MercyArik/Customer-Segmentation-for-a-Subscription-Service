@@ -53,8 +53,10 @@ Pivot Tables, Excel formula and SQL queries.
 =RANK.EQ(COUNTIF(D:D,D2), COUNTIF(D:D,D:D),0)
 ```
 ##### Pivot Tables
-https://github.com/MercyArik/Customer-Segmentation-for-a-Subscription-Service/blob/main/PIVOT1.png
-
+![PIVOT1](https://github.com/user-attachments/assets/12b70964-b8a4-40b2-901f-482169fe23a3)
+![PIVOT2](https://github.com/user-attachments/assets/bd7d357d-648b-4cb4-9b4f-7950392320c7)
+![PIVOT3](https://github.com/user-attachments/assets/18d16f2f-de6d-473f-b7fb-204948ac10ff)
+![PIVOT4](https://github.com/user-attachments/assets/3a822297-24aa-4cd1-b4aa-244bde4a35cc)
 #### SQL Queries
 ```
 select * from CustomerData$
@@ -155,11 +157,11 @@ from customerdata$;
 ```
 ```
 ### Data Visualization
-![Salesdata3](https://github.com/user-attachments/assets/c3d5b47e-e2cf-49cb-8d11-92f9a3c80c20)
-![Salesdata4](https://github.com/user-attachments/assets/68229dce-702f-475d-8d3f-c645c69b845a)
-![salesdata5](https://github.com/user-attachments/assets/1e13e631-4c23-46dd-87ba-64fb5199d7bc)
+The following is the visual generated using the SQL queries in PowerBI
+
 #### PowerBI Visuals
-![salesdata](https://github.com/user-attachments/assets/1d2874ea-5171-4a99-8438-dbb2ab510897)
+![Customerdata](https://github.com/user-attachments/assets/a26da379-16f3-4cb6-9eef-963eee63c954)
+
 ### Key Findings & Insights
 ##### Summary of Results: 
 - The number of sales transactions is evenly distributed between the four Regions (equal number of sales transactions per Region).
