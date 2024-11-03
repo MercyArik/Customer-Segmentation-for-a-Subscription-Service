@@ -57,6 +57,8 @@ Pivot Tables, Excel formula and SQL queries.
 ![PIVOT2](https://github.com/user-attachments/assets/bd7d357d-648b-4cb4-9b4f-7950392320c7)
 ![PIVOT3](https://github.com/user-attachments/assets/18d16f2f-de6d-473f-b7fb-204948ac10ff)
 ![PIVOT4](https://github.com/user-attachments/assets/3a822297-24aa-4cd1-b4aa-244bde4a35cc)
+### Key Findings & Insights
+
 #### SQL Queries
 ```
 select * from CustomerData$
