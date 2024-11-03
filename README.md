@@ -54,89 +54,105 @@ Pivot Tables, Excel formula and SQL queries.
 ```
 ##### Pivot Tables
 
+
 #### SQL Queries
 ```
-select * from SALESDATA$
----DESKTOP-194OHGQ\SQLEXPRESS---
----to remove duplicates from salesdata set---
+select * from CustomerData$
+
+
+--- to delete empty columns---
+alter table customerdata$
+drop column f11, f12, f13, f14, f15, f16
+
+--- to delete duplicates---
 
 WITH DuplicateRows AS (
 select
-ROW_NUMBER() OVER (PARTITION BY Product_type, Region, OrderDate, Quantity, UnitPrice, Revenue ORDER BY OrderID, CustomerId) AS RowNum
-FROM Salesdata$
+ROW_NUMBER() OVER (PARTITION BY CustomerName, Region, SubscriptionType, SubscriptionStart, SubscriptionEnd, Canceled, Revenue, SubscriptionDuration,Canceled_Count 
+ORDER BY CustomerID) AS RowNum
+FROM Customerdata$
 )
 DELETE FROM DuplicateRows
 WHERE RowNum > 1;
 
----retrieve the total sales for each product category.----
 
-select Product_type, sum(revenue) as Total_Sales from salesdata$ group by Product_type order by Total_Sales asc
+---retrieve the total number of customers from each region---
+SELECT Region, COUNT(CustomerID) AS Number_of_Customers FROM customerdata$ GROUP BY Region
 
----Find the number of sales transactions in each region.----
+--Find the most popular subscription type by the number of customers---
 
-select Region, count(OrderDate) as Number_of_Sales_Transactions from salesdata$ group by Region
+select top 1
+subscriptionType,
+count (customerID) as Number_of_customers
+from customerdata$
+group by subscriptionType
+order by Number_of_customers desc;
 
 
------ calculate monthly sales totals for the current year.---
+---Find customers who canceled their subscription within 6 months---
 
 select 
-year(orderdate) as Year,
-month(orderDate) as Month,
-sum(revenue) as Totalsales
-from salesdata$
-where year(orderDate)=year(GETDATE())
-GROUP BY 
-YEAR(orderdate), MONTH(orderDate)
-ORDER BY
-YEAR, month
+customerID,
+subscriptionstart,
+subscriptionend
+from customerdata$
+where SubscriptionEnd is not null
+and datediff(month, subscriptionstart, subscriptionend) <=6;
 
 
----Find the top 5 customers by total purchase amount.----
+---calculate the average subscription duration for all customers---
 
-select top 5
-Customerid,
-Product_type,
-sum(revenue) as Totalpurchase
-from SalesData$
-group by customerid, product_type
-order by Totalpurchase desc;
+select avg(datediff(day, subscriptionstart,
+coalesce(subscriptionend,
+getdate()))) as Avg_Subscription_Days,
+avg(datediff(month, subscriptionstart,
+coalesce(subscriptionend,
+getdate()))) as Avg_Subscription_Months,
+avg(datediff(Year, subscriptionstart,
+coalesce(subscriptionend,
+getdate()))) as Avg_Subscription_Year
+from customerdata$;
+
+---Find customers with subscriptions longer than 12 months---
+
+select 
+customerID,
+canceled
+subscriptionstart,
+subscriptionend,
+datediff(month, subscriptionstart, subscriptionend) as months_subscribed
+from customerdata$
+where subscriptionend is not null
+and datediff(month, subscriptionstart, subscriptionend) >12
+order by months_subscribed;
+
+---Calculate total revenue by subscription type---
+
+select 
+Subscriptiontype,
+sum(revenue) as Total_Revenue
+from customerdata$
+group by subscriptiontype
+order by Total_Revenue desc;
 
 
----Calculate the percentage of total sales contributed by each region---
-
-SELECT Region, SUM(Revenue) AS Total_Sales, (SUM(Revenue) / (SELECT SUM(Revenue) FROM Salesdata$) * 100) AS Percentage
-FROM Salesdata$
-GROUP BY Region
-ORDER BY SUM(Revenue) DESC;
-
-
----Identify products with no sales in the last quarter---
-
-select Orderid, customerId, Product_type
-from Salesdata$
-where Orderid NOT IN (
-select orderid
-from Salesdata$
-where Orderdate>=dateadd(day, -90, getdate())
-)
+---Find the top 3 regions by subscription cancellations---
+select top 3
+Region,
+count(canceled) as Cancellation_count
+from customerdata$
+where canceled ='1'
+group by region
+order by Cancellation_count desc;
 
 
----Find the highest-selling product by total sales value---
+---Find the total number of active and canceled subscriptions---
 
- select top 1
- orderid,
- product_type,
- sum(revenue) as TotalSales from salesdata$
- group by orderid, product_type
- order by
- Totalsales desc;
-
- ---Calculate total revenue per product---
-
- select product_type,
- sum(revenue) as TotalRevenue from salesdata$
- group by product_type
- order by TotalRevenue desc;
+select
+Sum(case when Canceled=1 then 1 end) as TotalCanceledSubscriptions,
+Sum(case when Canceled=0 then 1 end) as TotalActiveSubscriptions
+from customerdata$;
+```
 ```
 ### Data Visualization
 ![Salesdata3](https://github.com/user-attachments/assets/c3d5b47e-e2cf-49cb-8d11-92f9a3c80c20)
