@@ -157,7 +157,6 @@ Sum(case when Canceled=1 then 1 end) as TotalCanceledSubscriptions,
 Sum(case when Canceled=0 then 1 end) as TotalActiveSubscriptions
 from customerdata$;
 ```
-```
 ### Data Visualization
 The following is the visual generated using the SQL queries in PowerBI
 
