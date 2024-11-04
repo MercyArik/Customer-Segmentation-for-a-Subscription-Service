@@ -181,13 +181,27 @@ The following is the visual generated using the SQL queries in PowerBI
 
 ### Key Findings & Insights
 ##### Summary of Results: 
-- The 
+- With 17,000 (Seventeen Thousand) subscribers using the Basic type of subscription, the most popular subscription type is Basic.
+- The top three regions by cancellation count is the North, South and West respectively.
+- The total active subscription  is higher than the number of canceled subscription (Active:18612, Canceled:15175)
 ##### Implications: 
-The trend revealed by this findings is that Shoes and Shirts should always take the utmost priority during the peak periods which falls between January and February being the time when major sales are made. For the other months with low sales, discount and promotions would enhance and motivate customers to patronise the store.
+- Popularity of Basic Subscription: The Basic subscription is clearly the most popular among users, indicating a strong market preference. This could suggest that the features or pricing of the Basic plan align well with subscriber needs.
+
+- Cancellation Trends by Region: The highest cancellation rates in the North, South, and West regions might indicate localized issues or dissatisfaction. Understanding the specific reasons behind cancellations in these areas could be critical.
+
+- Overall Subscriber Growth: With more active subscriptions than cancellations, the service is experiencing net growth, which is a positive indicator of overall health. However, the high cancellation count still warrants attention to improve retention.
 ### Recommendations
-Inventory level and restock (Procurement) should focus on Shoes and Shirts by doubling the stocks to avoid turning down request from customers in January and February respectively. 
+- Enhance Basic Subscription Features: Since the Basic subscription is the most popular, consider enhancing its features or value proposition to retain subscribers. Collect feedback to identify desired improvements.
+
+- Investigate Regional Cancellations: Conduct targeted surveys or focus groups in the North, South, and West regions to gather insights into the reasons for cancellations. This will help tailor solutions to specific issues faced by users in those areas.
+
+- Retention Strategies: Develop and implement retention strategies, such as personalized communication, loyalty rewards, or special promotions aimed at subscribers in regions with high cancellation rates.
+
+- Monitor Subscription Metrics: Regularly track subscription growth and cancellation rates to identify trends over time. This data will help in making informed decisions and adjusting strategies proactively.
+
+- Explore Upsell Opportunities: For existing Basic subscribers, consider targeted marketing for higher-tier subscriptions, highlighting features that may appeal to users looking for more value.
 ### Project Summary
-The summary of this research and analysis shows that the store should focus it strenght in the sales of shoes, shirts, hat and glove in descending order. Jackets and socks should receive less attention.
+By addressing the issues of cancellation while enhancing the popular Basic subscription, you can strengthen subscriber loyalty and ensure sustained growth.
 ### References
 Data Source(s): Data authored by The incubator Hub
 
