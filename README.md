@@ -18,9 +18,8 @@ This project analyzes customer data for a subscription service to identify key c
 The project consists of three main components: Excel Data Exploration, SQL Query Analysis, and Power BI Dashboard.
 ###### Folders and Files
 -https://github.com/MercyArik/Customer-Segmentation-for-a-Subscription-Service/blob/main/Customerrawdata.xlsx /data: Contains raw sales data used for this analysis.
-- sql/scripts: SQL queries and scripts.
 - https://github.com/MercyArik/Customer-Segmentation-for-a-Subscription-Service/blob/main/CustomerReports.xlsx/Excel Reports: Contains Excel summary tables and initial analysis.
-- /PowerBI: Contains Power BI files for the dashboard.
+- https://github.com/MercyArik/Customer-Segmentation-for-a-Subscription-Service/blob/main/Customerdata.png/PowerBI: Contains Power BI files for the dashboard.
 ### Tools Used
 The following applications was used for data cleaning, analysis, manipulation and visualizations:
 - Microsoft Excel: Data cleaning, exploration and initial metrics calculation.
