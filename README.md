@@ -34,7 +34,7 @@ The preprocessing stage took the following shape:
 2. Removing duplicates and blanks (null vales)
 3. Data cleaning and formatting
 4. Transformation of the variables and datatypes
-### Exploraroty Data Analysis 
+### Exploratory Data Analysis 
 The EDA will be use to explore the data while providing answer to the following questions about subscription pattern such as;
 - Retrieve the total number of customers from each region.
 - Find the most popular subscription type by the number of customers.
@@ -58,7 +58,28 @@ Pivot Tables, Excel formula and SQL queries.
 ![PIVOT3](https://github.com/user-attachments/assets/18d16f2f-de6d-473f-b7fb-204948ac10ff)
 ![PIVOT4](https://github.com/user-attachments/assets/3a822297-24aa-4cd1-b4aa-244bde4a35cc)
 ### Key Findings & Insights
+# Key Findings and Insights from Pivot Tables
 
+This document summarizes key findings and insights derived from the analysis of subscription data using pivot tables.
+
+## Key Findings
+
+1. **Popular Subscription Type**
+   - The **Basic** subscription type is the most popular among users.
+
+2. **Average Subscription Duration**
+   - The average subscription duration is **365.35 days**, indicating that no subscription exceeds one year.
+
+3. **Revenue Insights**
+   - The **highest revenue** recorded is **$33,776,735** from the Basic subscription type.
+
+4. **Revenue by Region**
+   - **East Region**: Highest revenue
+   - **North Region**: Second highest revenue
+   - **South Region**: Third highest revenue
+   - **West Region**: Lowest subscription revenue
+
+These insights can help guide future marketing strategies and product offerings by focusing on the most popular subscription type and regions with the highest revenue.
 #### SQL Queries
 ```
 select * from CustomerData$
