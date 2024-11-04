@@ -203,5 +203,5 @@ The following is the visual generated using the SQL queries in PowerBI
 ### Project Summary
 By addressing the issues of cancellation while enhancing the popular Basic subscription, you can strengthen subscriber loyalty and ensure sustained growth.
 ### References
-Data Source(s): Data authored by The incubator Hub
+Data Source(s): Data authored by The Incubator Hub
 
