@@ -177,6 +177,8 @@ The following is the visual generated using the SQL queries in PowerBI
 
 #### PowerBI Dashboard
 ![Customerdata](https://github.com/user-attachments/assets/a26da379-16f3-4cb6-9eef-963eee63c954)
+![CustData](https://github.com/user-attachments/assets/0cf0df65-2bee-4241-bd08-a44503b37170)
+
 
 ### Key Findings & Insights
 ##### Summary of Results: 
